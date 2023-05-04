@@ -1,0 +1,10 @@
+C:\Users\maria\Projects\ZoomAndCalendar\bin\Debug\net5.0\ZoomAndCalendar.deps.json
+C:\Users\maria\Projects\ZoomAndCalendar\bin\Debug\net5.0\ZoomAndCalendar.dll
+C:\Users\maria\Projects\ZoomAndCalendar\bin\Debug\net5.0\ZoomAndCalendar.pdb
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.csproj.AssemblyReference.cache
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.AssemblyInfoInputs.cache
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.AssemblyInfo.cs
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.csproj.CoreCompileInputs.cache
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.dll
+C:\Users\maria\Projects\ZoomAndCalendar\obj\Debug\net5.0\ZoomAndCalendar.pdb
