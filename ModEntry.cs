@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
+using StardewValley.Menus;
 
 namespace ZoomAndCalendar
 {
@@ -18,9 +20,7 @@ namespace ZoomAndCalendar
         public override void Entry(IModHelper helper)
         {
             helper.Events.Input.ButtonPressed += this.OnButtonPressed;
-            
         }
-
 
         /*********
         ** Private methods
@@ -34,8 +34,6 @@ namespace ZoomAndCalendar
             if (!Context.IsWorldReady)
                 return;
 
-            //this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
-
             if (e.Button.ToString().Equals("PageUp"))
             {
                 if (Game1.options.desiredBaseZoomLevel < 3f)
@@ -45,6 +43,24 @@ namespace ZoomAndCalendar
             {
                 if (Game1.options.desiredBaseZoomLevel > 0.2f)
                     Game1.options.desiredBaseZoomLevel -= 0.05f;
+            }
+
+            if (e.Button.ToString().Equals("G") && Game1.activeClickableMenu != null) //G is for gifts
+            {
+                if (Game1.activeClickableMenu is Billboard menu)
+                {
+                    foreach (ClickableTextureComponent day in menu.calendarDays)
+                    {
+                        if (day.bounds.Contains(Game1.getMouseXRaw(), Game1.getMouseYRaw()))
+                        {
+                            NPC bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, day.myID);
+                            if (bdayNPC != null)
+                            {
+                                Game1.activeClickableMenu = new ProfileMenu(bdayNPC);
+                            }
+                        }
+                    }                    
+                }
             }
         }
     }
